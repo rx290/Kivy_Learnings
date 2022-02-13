@@ -1,0 +1,59 @@
+AnchorLayoutEnc:
+
+# Adding button with .kv files in a layout
+<BoxLayoutEnv>:
+    orientation: "horizontal"
+    Button:
+        text: "A"
+        # Size don't work in layouts so we use proportional size hints which is like height and width
+        size_hint: .5,.2
+        
+        # Over ridding the size is easy put width and height as none and use size or width and height properties like as follows
+        # size: "100dp", "60dp"
+        # width: "60dp"
+        # height: "100dp"
+
+        # Moreover we can use custom positions to place buttons or other widgets to our desired positions by using following syntax:
+        # pos_hint: x or center_x or right for vertical orientation
+        # pos_hint: y or center_y or top for horizontal orientation
+        # pos_hint: {"x":.5}
+        # pos_hint: {"center_x":.5}
+        # pos_hint: {"right":.5}
+        # pos_hint: {"y":.5}
+        # pos_hint: {"center_y":.5}
+        # pos_hint: {"top":.5}
+
+    Button:
+        text: "B"
+    # Will be using another layout inside of an existing one
+    BoxLayout:
+        orientation: "vertical"
+        spacing: "10dp"
+        Button:
+            text: "1"
+        Button:
+            text: "2"
+        Button:
+            text: "3"
+        Button:
+            text: "4"
+        
+
+
+# generic Main Widget
+<MainWidget>:
+    Label:
+        text: "Button 1:"
+        size:  40,20
+        pos:   0,200
+        color: 1,0,1,1
+
+    Button:
+        text: "Btn_1_wpp"
+        size:  400,200
+        pos:   100,200
+
+    Button:
+        text: "Btn_2"
+        size:  "40dp","20dp"
+        pos:   "200dp","400dp"
