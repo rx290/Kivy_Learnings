@@ -1,8 +1,52 @@
-AnchorLayoutEnc:
+GridLayoutEnv:
+<GridLayoutEnv@GridLayout>:
+    # we have two required parameters for GridLayout which are Columns and Rows
+    rows: 4
+    cols: 2
+    Button:
+        text: "1"
+        size_hint: .2,.2
+    Button:
+        text: "2"
+        size_hint: .2,.2
+    Button:
+        text: "3"
+        size_hint: .2,.2
+    Button:
+        text: "4"
+        size_hint: .2,.2
+    BoxLayoutEnv:
+    Button:
+        text: "6"
+        size_hint: .2,.2
+    Button:
+        text: "7"
+        size_hint: .2,.2
+    Button:
+        text: "8"
+        size_hint: .2,.2
 
-# Adding button with .kv files in a layout
+
+
+
+<AnchorLayoutEnv>:
+    # Placement tags are anchor_x and anchor_y for horizontal and vertical use each have three parameters
+    # right, left and center (center being the default for x)
+    # top, bottom and center (center being the default for y)
+    # Use another layout to add more widgets as it'll be drawn on the existing one for example use a box layout if you want to use multiple buttons vertically or horizontally
+
+    
+    anchor_x: "left"
+    anchor_y: "bottom"
+    Button:
+        text: "A"
+        size_hint: .2,.2
+
+
+
 <BoxLayoutEnv>:
     orientation: "horizontal"
+    # Adding button with .kv files in a layout
     Button:
         text: "A"
         # Size don't work in layouts so we use proportional size hints which is like height and width

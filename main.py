@@ -9,9 +9,18 @@ from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 # Importing Anchor Layout
 from kivy.uix.anchorlayout import AnchorLayout
+# Importing Grid Layout
+from kivy.uix.gridlayout import GridLayout
+
+# Grid layout implementation
+# Grid layout is where you can actually control everything with rows and columns drawn on the canvas i.e. screen
+# we can also initiate a class with .kv file so for demonstration purposes i'm going to comment out this class and use the class there
+# class GridLayoutEnv(GridLayout):
+#     pass
+
 
 # Anchor layout Implementation
-# Anchor layout takes space
+# Anchor layout takes all space you need to place and size the widgets within it
 class AnchorLayoutEnv(AnchorLayout):
     pass
 
