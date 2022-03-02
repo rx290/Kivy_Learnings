@@ -1,4 +1,37 @@
-GridLayoutEnv:
+PageLayoutEnv:
+
+# Most important layout is box layout and there are several other widgets like image and sliders look into them and practice to keep in touch 
+# with kivy Development. Apart from that Kivy Design file is important to keep all the things clean and tidy
+
+
+<PageLayoutEnv@PageLayout>:
+    # A layout which allows you to have multiple layouts in a horizontal scroll 
+    
+    MainWidget:
+    BoxLayoutEnv:
+    AnchorLayoutEnv:
+    GridLayoutEnv:
+    StackLayoutEnv:
+    ScrollviewEnv:
+
+
+
+
+<ScrollviewEnv@ScrollView>:
+    StackLayoutEnv:
+        size_hint: 1,None
+        height: self.minimum_height
+
+
+<StackLayoutEnv>:
+    # Use these orientation for Stack left to right = lr, right to left =rl
+    # top to bottom = tb and bottom to top = bt
+    #orientation: "rl-tb"
+    # padding params works clockwise Left Top Right Bottom
+    #padding: ("10dp","10dp","10dp","10dp")
+    # We can also provide spacing in element using spacing and prams are as follows vertically and horizontally
+    #spacing: ("20dp","20dp")
+
 <GridLayoutEnv@GridLayout>:
     # we have two required parameters for GridLayout which are Columns and Rows
     rows: 4
@@ -25,9 +58,6 @@ GridLayoutEnv:
     Button:
         text: "8"
         size_hint: .2,.2
-
-
-
 
 <AnchorLayoutEnv>:
     # Placement tags are anchor_x and anchor_y for horizontal and vertical use each have three parameters

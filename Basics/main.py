@@ -11,6 +11,25 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.anchorlayout import AnchorLayout
 # Importing Grid Layout
 from kivy.uix.gridlayout import GridLayout
+# Impporting Stack Layout 
+from kivy.uix.stacklayout import  StackLayout
+# Importing Scrollview Layout
+from kivy.uix.scrollview import ScrollView
+
+# class  ScrollviewEnv(ScrollView):
+#     pass
+
+# Stack layout Implementation
+# Stack layout places all elements in rows when the space is used in the row element is shifted to another row
+# Stack follows First In Last Out Mechanism
+class StackLayoutEnv(StackLayout):
+    def __init__(self, **kwargs):
+      super().__init__(**kwargs)
+      self.orientation= "lr-bt"
+      # Creating a loop to generate 10 buttons
+      for i in range(1,25):
+          _btn = Button(text="Button "+str(i), size_hint = (0.2,0.2))
+          self.add_widget(_btn)
 
 # Grid layout implementation
 # Grid layout is where you can actually control everything with rows and columns drawn on the canvas i.e. screen
