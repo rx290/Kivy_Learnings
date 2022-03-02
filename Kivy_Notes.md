@@ -13,6 +13,11 @@
     3. In the bottom right of the code editor click on Python version and select the source of your Kivy_env
     4. You're good to go.
 
+## Important Notes
+
+    When creating the base app should be named exactly what the .kv design file is going to get named.
+    Otherwise kivy GUI will show a blank screen
+
 ## Basics
 
     Start with a class like all other libraries.
