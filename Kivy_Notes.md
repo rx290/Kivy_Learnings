@@ -85,7 +85,6 @@
 ### Layouts
 
     1. Box layout
-        
     2. Anchor layout  
     3. Grid layout
     4. Stack Layout

@@ -2,8 +2,16 @@ WidgetEnv:
 
 <WidgetEnv>:
     cols:3
+    ToggleButton:
+        text: "OFF"
+        on_state: root.on_state_func(self)
+        size_hint: None,1
     Button:
         text: "Click Me"
-        on_press: root.on_button_press()
+        on_press: root.on_button_press(self)
+        disabled: not root.is_enabled
     Label:
         text: root.label_text
+        font_name: "Comic"
+        font_size: "80dp"
+        color: 1,.5,1,1
