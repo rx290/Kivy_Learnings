@@ -22,8 +22,10 @@ from kivy.properties import  StringProperty, BooleanProperty
 
 class WidgetEnv(GridLayout):
     num = 0
+    s_v = 0
     is_enabled = BooleanProperty(False)
     label_text = StringProperty("0")
+    slider_value = StringProperty("0")
     #Creating a button on press function to increment the number and display it as a counter
     def on_button_press(self,btn):
         if self.is_enabled == True:
@@ -41,6 +43,11 @@ class WidgetEnv(GridLayout):
         else:
             widget.text = "ON"
             self.is_enabled = True
+            
+    def on_value_change(self,slider):
+        print("Slider: "+ str(int(slider.value)))
+        self.slider_value = str(self.s_v + int(slider.value))
+        
 
 # Base Class which is the foundation or blueprint of the entire app
 class widgets(App):

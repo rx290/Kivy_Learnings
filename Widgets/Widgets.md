@@ -45,3 +45,32 @@
             on_active: root.on_switch_active(self)
             size_hint: None,1
             width: "80dp"
+
+### Slider
+
+    A simple widget which grabs continuos value be it in either horizontal or vertical orientation.
+    Example:
+        Slider:
+            # Provide minimum value here
+            min:0
+            # Provide maximum value here
+            max:100
+            # Provide default value here
+            value: 50
+            # Give function which is triggered when the value is changed
+            on_value: root.on_value_change(self)
+            # Give orientation details here
+            orientation: "vertical or horizontal"
+
+### ID
+
+    id is the unique attribute or property of the widget which helps us to get values out of particular widgets.
+    let say if we add id to slider than we can simply get the values of the slider without the need of the on_value property.
+    following scenario has been implemented in the kv file.
+
+### ProgressBar
+
+    A widget which displays continuity of a value without interaction.
+    Minimum value can't be overridden in progressbar
+
+    

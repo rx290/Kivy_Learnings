@@ -19,5 +19,24 @@ WidgetEnv:
 
     Switch:
         on_active: root.on_switch_active(self)
+        id: my_switch
         size_hint: None,1
         width: "80dp"
+        # Default State of the Switch
+        active: True
+    Slider:
+        id : my_slider
+        min:0
+        max:150
+        value: 50
+        # Corelation with switch widget and it's active state
+        disabled: my_switch.active
+        on_value: root.on_value_change(self)
+        orientation: "vertical"
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: str(int(my_slider.value))
+        ProgressBar:
+            max: 150
+            value: my_slider.value
