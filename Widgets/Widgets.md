@@ -37,4 +37,11 @@
 
     You can simply use OS default fonts like on windows we can use Arial, Comic etc
 
+### Switch
 
+    Switch is similar to toggle button but unlike it it manages the state and sets a trigger when it is manipulated
+    example:
+        Switch:
+            on_active: root.on_switch_active(self)
+            size_hint: None,1
+            width: "80dp"

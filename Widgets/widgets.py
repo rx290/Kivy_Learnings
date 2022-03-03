@@ -30,6 +30,8 @@ class WidgetEnv(GridLayout):
             self.num += 1
             self.label_text = str(self.num)
 
+    def on_switch_active(self,switch):
+        print("Switch: " + str(switch.active))
         
     
     def on_state_func(self,widget):
