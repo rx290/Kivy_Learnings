@@ -30,9 +30,10 @@ WidgetEnv:
         max:150
         value: 50
         # Corelation with switch widget and it's active state
-        disabled: my_switch.active
+        disabled: not my_switch.active
         on_value: root.on_value_change(self)
         orientation: "vertical"
+    
     BoxLayout:
         orientation: "vertical"
         Label:
@@ -40,3 +41,17 @@ WidgetEnv:
         ProgressBar:
             max: 150
             value: my_slider.value
+    
+
+    TextInput:
+        id: my_text_input
+        size_hint: None,1
+        width: "100dp"
+        # Place holder or Default text
+        text: "Remove this line and enter something here"
+        # Attribute to convert it to single or multi line input
+        multiline: True
+        on_text_validate: root.on_text_validate(self)
+    Label:
+        # Updating it with the input text
+        text: root.text_input_str

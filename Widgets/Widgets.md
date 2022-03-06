@@ -73,4 +73,9 @@
     A widget which displays continuity of a value without interaction.
     Minimum value can't be overridden in progressbar
 
-    
+### TextInput
+
+    An input mechanism for kivy to let user feed some information to the software
+    We can use this to update other widgets as well.
+    This is by default multiline and can be overridden as single line input by its attributes.
+    on_text_Validate can be used to update text when enter line is pressed

@@ -26,6 +26,7 @@ class WidgetEnv(GridLayout):
     is_enabled = BooleanProperty(False)
     label_text = StringProperty("0")
     slider_value = StringProperty("0")
+    text_input_str = StringProperty("Remove this line and enter something here")
     #Creating a button on press function to increment the number and display it as a counter
     def on_button_press(self,btn):
         if self.is_enabled == True:
@@ -47,6 +48,9 @@ class WidgetEnv(GridLayout):
     def on_value_change(self,slider):
         print("Slider: "+ str(int(slider.value)))
         self.slider_value = str(self.s_v + int(slider.value))
+    
+    def on_text_validate(self, widget):
+        self.text_input_str = widget.text
         
 
 # Base Class which is the foundation or blueprint of the entire app
