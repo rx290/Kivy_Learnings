@@ -1,8 +1,8 @@
-# The Lab
+# The Lab Part 2
 
 ## Content
 
-    This section is going to teach us diffrent widgets which are as follows:
+    This section is going to teach use different widgets which are as follows:
         1. Toggle Buttons
         2. Custom Fonts
         3. Button Click function & its Relation

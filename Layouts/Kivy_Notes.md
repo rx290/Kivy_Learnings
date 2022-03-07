@@ -1,4 +1,6 @@
-# Kivy Notes
+# The Lab Part 1
+
+## Kivy Notes
 
 ## Installation
 
