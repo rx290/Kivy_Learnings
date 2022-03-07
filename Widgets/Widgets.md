@@ -78,4 +78,13 @@
     An input mechanism for kivy to let user feed some information to the software
     We can use this to update other widgets as well.
     This is by default multiline and can be overridden as single line input by its attributes.
-    on_text_Validate can be used to update text when enter line is pressed
+    on_text_Validate can be used to update text when enter line is pressed.
+
+### Image
+
+    An image widget is there to place images within out app.
+    properties:
+        1. allow_stretch
+                Useful when making a resizable widget
+        2. keep_ratio
+                Useful for backgrounds like gradients and other stuff
