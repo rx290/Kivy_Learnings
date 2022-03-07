@@ -88,3 +88,7 @@
                 Useful when making a resizable widget
         2. keep_ratio
                 Useful for backgrounds like gradients and other stuff
+
+### Screen Manager
+
+### Managing Navigation Stack
