@@ -1,0 +1,22 @@
+CanvasEnv:
+
+# Declaring variables in the kv files
+
+#:set length dp(150)
+#:set width dp(150)
+
+<CanvasEnv>:
+    canvas:
+        Rectangle:
+            # Centering the drawing by subtracting the space occupied by the drawing with the actual center of the screen
+            pos: self.center_x-length/2, self.center_y-width/2
+            size: length,width
+        Ellipse:
+            pos:200,500
+            size: length,width
+        Line:
+            # works with points like this (start_x,start_y,ending_x,ending_y....)
+            # This will create a small pyramid of two lines
+            # points: (0,0,100,100,200,0)
+            # lets use screen properties to create multiple pyramids with resizing quality
+            points: (0,0, self.width/4,100,self.width/2,0,self.width*3/4,100,self.width,0)

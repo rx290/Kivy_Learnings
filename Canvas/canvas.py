@@ -1,5 +1,6 @@
 #Importing Base App
 from cgitb import text
+from tkinter import Canvas
 from kivy.app import  App
 #Importing Widget for App
 from kivy.uix.widget import Widget
@@ -16,14 +17,13 @@ from kivy.uix.stacklayout import  StackLayout
 # Importing Scrollview Layout
 from kivy.uix.scrollview import ScrollView
 
-#Canvas Class to create diffrent objects and environment in the Kivy 
-class MainWidget(Widget):
+# Base Class which is the foundation or blueprint of the entire app
+class canvas(App):
     pass
 
-# Base Class which is the foundation or blueprint of the entire app
-class TheLabApp(App):
+class CanvasEnv(Widget):
     pass
 
 #Launching the instance of the base lib
-TheLabApp().run()
+canvas().run()
 
