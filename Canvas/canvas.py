@@ -23,6 +23,11 @@ class canvas(App):
 
 class CanvasEnv(Widget):
     pass
+class CanvasEnv2(Widget):
+    pass
+class CanvasEnv3(Widget):
+    pass
+
 
 #Launching the instance of the base lib
 canvas().run()
