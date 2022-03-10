@@ -1,4 +1,4 @@
-CanvasEnv3:
+CanvasEnv4:
 
 # Declaring variables in the kv files
 
@@ -40,3 +40,9 @@ CanvasEnv3:
             ellipse: (500,300,100,200) #center_x, center_y, radius_x, radius_y
         Line:
             rectangle: (800,100,300,200) #x, y, w, h
+
+<CanvasEnv4>:
+    Button:
+        pos: 100,400
+        text: "Mover"
+        on_press: root.move_box()
