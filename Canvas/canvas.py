@@ -18,6 +18,8 @@ from kivy.uix.scrollview import ScrollView
 from  kivy.graphics import *
 from  kivy.metrics import *
 
+from kivy.properties import Clock
+
 
 # Base Class which is the foundation or blueprint of the entire app
 class canvas(App):
@@ -48,11 +50,40 @@ class CanvasEnv4(Widget):
     def move_box(self):
         # Creating x and y position parameter for rectangle position
         x,y = self.rect.pos
+        w,h = self.rect.size
+        
+        increment = dp(10)
+        
+        # Logic to make a border at the right side of the window
+        rect_pos_diff = self.width - (x+w)
+        if rect_pos_diff < inc:
+            inc = rect_pos_diff
         # Updating the current position
-        x += dp(10)
+        x += increment
         # As tuple are immutable we are assigning new values to the pos pram
         self.rect.pos = (x,y)
+
+# 60 fps function
+class CanvasEnv5(Widget):
         
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.ball_size =dp(50)
+        # Canvas
+        with self.canvas:
+            # Property to keep ball in center
+            self.ball = Ellipse(pos=self.center, size=(self.ball_size,self.ball_size))
+        # Property to call update function
+        Clock.schedule_interval(self.update,1/60)
+    
+    # Function to move ball
+    def on_size(self,*args):
+        self.ball.pos = ( self.center_x - self.ball_size/2, self.center_y-self.ball_size/2 )
+    
+    # Function to send and update location
+    def update(self, dt):
+        x,y = self.ball.pos
+        self.ball.pos = (x+10,y)
         
 #Launching the instance of the base lib
 canvas().run()
